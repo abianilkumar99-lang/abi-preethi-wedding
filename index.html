@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abi ❤️ Preethi</title>
+
+<style>
+body{
+margin:0;
+font-family:Georgia,serif;
+background:#f8f2e7;
+text-align:center;
+color:#5a3d1e;
+}
+
+.hero{
+padding:30px;
+}
+
+img{
+width:280px;
+max-width:90%;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.3);
+}
+
+h1{
+font-size:42px;
+margin:20px 0 5px;
+}
+
+h2{
+color:#b8860b;
+}
+
+.card{
+background:white;
+width:90%;
+max-width:500px;
+margin:auto;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:15px;
+margin-top:20px;
+flex-wrap:wrap;
+}
+
+.box{
+background:#b8860b;
+color:white;
+padding:15px;
+border-radius:15px;
+min-width:70px;
+}
+
+.box span{
+font-size:28px;
+font-weight:bold;
+display:block;
+}
+
+.button{
+display:inline-block;
+margin-top:20px;
+padding:15px 30px;
+background:#8b5e3c;
+color:white;
+text-decoration:none;
+border-radius:30px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+
+<img src="couple.jpg">
+
+<h1>Abi ❤️ Preethi</h1>
+
+<h2>Wedding Invitation</h2>
+
+<div class="card">
+
+<h3>18 August 2026</h3>
+
+<h3>10:00 AM</h3>
+
+<p><b>Venue</b></p>
+
+<p>
+KTCT AUDITORIUM<br>
+Kaduvayil Palli<br>
+Attingal, Trivandrum
+</p>
+
+<p>
+All are welcome to participate in this beautiful moment and make it even more beautiful.
+</p>
+
+<h2>Countdown</h2>
+
+<div class="countdown">
+<div class="box"><span id="days">0</span>Days</div>
+<div class="box"><span id="hours">0</span>Hours</div>
+<div class="box"><span id="minutes">0</span>Minutes</div>
+<div class="box"><span id="seconds">0</span>Seconds</div>
+</div>
+
+<a class="button" href="https://maps.google.com/?q=KTCT+Auditorium+Kaduvayil+Palli+Attingal">View Location</a>
+
+</div>
+
+</div>
+
+<script>
+
+const target=new Date("August 18, 2026 10:00:00").getTime();
+
+setInterval(function(){
+
+const now=new Date().getTime();
+
+const distance=target-now;
+
+document.getElementById("days").innerHTML=Math.floor(distance/(1000*60*60*24));
+
+document.getElementById("hours").innerHTML=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("minutes").innerHTML=Math.floor((distance%(1000*60*60))/(1000*60));
+
+document.getElementById("seconds").innerHTML=Math.floor((distance%(1000*60))/1000);
+
+},1000);
+
+</script>
+
+</body>
+</html>
